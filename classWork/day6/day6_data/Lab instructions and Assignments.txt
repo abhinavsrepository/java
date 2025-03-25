@@ -250,7 +250,7 @@ eg : Consider this hierarchy
 Object <----Emp <---Mgr <---SalesMgr, HRMgr
 Object <---- Emp <--- Worker <--TempWorker
 Solve - 
-Emp e=new Mgr(......);//chalega
+Emp e=new Mgr(......);
 e instanceof SalesMgr : 
 e instanceof HRMgr : 
 e instanceof Worker : 
@@ -267,7 +267,7 @@ e instanceof TempWorker
 e instanceof Emp
 e instanceof Object : 
 
-//in diffrent files with inheritance
+
 3. Solve (Mandatory assignment)
 Read complete assignment n then only solve.
 
@@ -324,10 +324,46 @@ Invoke correct functionality (pulp / juice / jam)
 4. Reading H.W (to be done after the lab)
 Go through - today's important readmes and sequence
 
+Day 6
+
+Refer to today's sequence 
+1. import day6.1 to revise abstract classes , along with the readme - "day6-data\day6_help\regarding abstraction.txt"
+
+2. import day6.2 to revise interfaces , along with the readme - "day6-data\day6_help\interfaces_help\About interfaces.txt"
+
+3. Hands on - 
+Complete Day 5 FruitBasket assignment.
+
+4. Continue with the same.
+4.1 Can you add abstraction in the Fruits scenario?
 
 
+4.2 Add these options
+
+6. Mark a fruit in a basket , as stale(=not fresh)
+i/p : index 
+o/p : error message (in case of invalid index) 
+In case of valid index - mark it stale
+
+7. Mark all sour fruits stale 
+Hint : Use equals() method of the String class.
+(We haven't covered it yet. You can look at javadocs and try it)
 
 
+Objective 
+4.1 Design Banking system  for CRUD operations in core banking.
+4.2 BankAccount HAS-A
+account no , customer name(first name ,last name) , balance ,  account  type : string
+account no - accept it from user , so that you can add account nos in random order.
 
+4.3 Add suitable constructor - for creating new account
+Add toString - for returning a/c details.
+4.4 Design interface for core Banking operations
+Start with 
+1. Open bank account
+2. Display all accounts
+3. Deposit Funds
+0. Exit
+(Later will add more options)
 
 

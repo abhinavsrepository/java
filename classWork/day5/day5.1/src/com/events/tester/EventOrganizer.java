@@ -82,3 +82,6 @@ public class EventOrganizer {
 	}
 
 }
+
+//run time polymorphism
+
