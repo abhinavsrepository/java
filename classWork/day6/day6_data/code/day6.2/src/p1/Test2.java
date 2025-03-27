@@ -14,7 +14,7 @@ public class Test2 {
 				new FilePrinter(), 
 				new NetworkPrinter() }; // up casting - indirect
 																		// referencing. - javac
-																								// implicitly adds the
+			//instancee mean object hai ki nhi										// implicitly adds the
 																								// cast
 		for (Printer p : printers) {
 			if (p instanceof FilePrinter) {

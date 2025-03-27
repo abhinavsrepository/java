@@ -25,6 +25,9 @@ public class Test1 {
 		}; //up casting - indirect referencing. - javac implicitly adds the cast
 		for (Printer p : printers)
 			p.print("Hello !");//run time polymorphism
+		//print method is common functionality
+		// when super type referencce sometime
+		//
 	}
 
 }
