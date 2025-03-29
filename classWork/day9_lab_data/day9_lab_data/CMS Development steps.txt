@@ -1,0 +1,42 @@
+Development steps
+1. Create new project
+2. Create Customer class n ServicePlan - enum - with plan cost , under the package - com.cms.core 
+
+2.1 identify the fields (instance variables)
+2.2 parameterized ctor
+2.3 toString 
+2.4 equals
+
+3. Create custom checked exception class , in a separate package
+com.cms.custom_exceptions
+
+4. Create CMSValidations class - in a separate package -
+com.cms.validations
+4.1 Add public static method - to validate plan n reg amount
+public static ServicePlan validatePlanAndRegAmount(String plan,double amount) throws .... 
+{
+//1. parsing  --> error --> JVM will throw system exception
+//2. chk plan n amount - in case of err ---> throw custom exc
+}
+
+
+5. Create Business logic (service)layer
+5.1 CMSOperations -i/f
+1. sign up (registration)
+String registerCustomer(String fn ln,em,pwd.....) throws ...
+
+5.2 Implementation class 
+CMSOperationsImpl
+-  customer [] 
+-counter
+
+1. public String registerCustomer(String fn ln,em,pwd.....) throws ...
+ - call validation rule/s
+- in case of success
+ customer obj , add its ref to the array 
+return mesg - customer id
+
+
+
+
+
