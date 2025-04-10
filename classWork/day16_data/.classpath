@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="day16_data/code/day16.1/src"/>
+	<classpathentry kind="src" path="day16_data/code/day16.2/src"/>
+	<classpathentry kind="src" path="day16_data/day16_help/extra help/ready code1"/>
+	<classpathentry kind="src" path="day16_data/day16_help/extra help/ready code2"/>
+	<classpathentry kind="src" path="day16_data/day16_help/extra help/ready code3"/>
+	<classpathentry kind="output" path="day16_data/code/day16.1/bin"/>
+</classpath>

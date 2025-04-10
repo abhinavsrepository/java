@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="day17_data/code/cms_map_fp/src"/>
+	<classpathentry kind="src" path="day17_data/code/day17.1/src"/>
+	<classpathentry kind="src" path="day17_data/code/day17.2/src"/>
+	<classpathentry kind="src" path="day17_data/code/day17.3/src"/>
+	<classpathentry kind="src" path="day17_data/day17_help/cloning"/>
+	<classpathentry kind="src" path="day17_data/day17_help/reflection_help/test_reflection/src"/>
+	<classpathentry kind="output" path="day17_data/code/cms_map_fp/bin"/>
+</classpath>
