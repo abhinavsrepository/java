@@ -214,4 +214,6 @@ Non-Functional Requirements:
 3. Application must be created using appropriate layers.(eg : CollectionUtils ,IOUtils , Custom exception , core classes , validation rules, tester)
 4. Wherever possible try to use functional programming (declarative) over imperative approach.
 
+write this in different packages of ui core implementation and exception handling
+
 
