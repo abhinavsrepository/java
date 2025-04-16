@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dt=new Date();
+        console.log("Day: "+dt.getDay())
+        console.log("Month: "+dt.getMonth()+1)
+        console.log("Year: "+dt.getFullYear());
+        var dt1=new Date(2024,3,16);
+        document.write(dt1+"<br>");
+        t1=dt.getTime(); //millisec from 1 Jan 1970
+        t2=dt1.getTime();
+        diff=t1-t2;
+        //convert millisec in to days
+        daysdiff=diff/(1000*60*60*24);
+        document.write("difference : "+daysdiff)
+    </script>
+</body>
+</html>

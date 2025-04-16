@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calccombination(n,r){
+            //a function which has access to all variables
+            //in its parent scope is called as closure function
+            function factorial(n){
+            fact=1;
+            for(var i=1;i<=n;i++){
+                fact=fact*i;
+            }
+            return fact;
+        }
+            ans=factorial(n)/factorial(n-r)
+        }
+        //self calling functions , in jquery to write
+        //custom plugin
+        (function (a,b){
+            console.log("in self calling function",a,b)
+        })(10,12)
+        //self calling function
+        const calccnt=(function(){
+               var cnt=0
+            return function(){
+                cnt++;
+                return cnt
+            }
+        })()
+        console.log("count: "+calccnt())
+        console.log("count: "+calccnt())
+        console.log("count: "+calccnt())
+        
+        function f4(){
+            cnt=45;
+        }
+    </script>
+</body>
+
+</html>

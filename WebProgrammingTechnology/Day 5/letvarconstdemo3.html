@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //redeclartion is allowed in var
+        var x=45;
+        console.log("x: "+x+"is of type "+typeof(x))
+        //template operator
+        console.log(`x: ${x} is of type ${typeof(x)}`)
+        var x="Kishori"
+        //redeclaration is not allowed in let
+        let y=34;
+        //let y=50;  //error
+        //var is global or function scope
+        //let is blocked scope
+        var a=23;
+        for(var i=0;i<10;i++){
+            a++;
+        }
+        console.log("value of i "+i)
+        for(let j=0;j<10;j++){
+            a++;
+        }
+        //console.log("value of j"+j) //error
+
+        function f1(){
+            var x="Rajan"
+            let s=10;
+            console.log("inside function "+x)
+            if(s>=10){
+                var p=30;
+                let q=34;
+                console.log("inside function : p "+p);
+                console.log("inside function : q "+q);
+            }
+            console.log("inside function outside if: p "+p);
+           // console.log("inside function ourside if: q "+q); //error
+        }
+        f1();
+        console.log("outside function "+x)
+        
+        //hoisting of variable is possible in var
+        console.log(" variable v : "+v)
+        var v=34
+        //hoisting of variable declaration is not possible in let
+        
+        //console.log(" variable h : "+h) //error
+        let h=34
+
+        const c=34;
+        c=67;
+
+        function f2(){
+
+        }
+        const f3=function(){
+
+        }
+        f3=12;
+        f3()
+    </script>
+</body>
+</html>
