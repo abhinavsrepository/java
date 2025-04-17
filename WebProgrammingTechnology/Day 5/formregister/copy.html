@@ -6,6 +6,46 @@
     <title>Document</title>
 </head>
 <body>
+    <table>
+        <form action="registerdata" onsubmit="return validatedata()">
+            <tr>
+                <td>
+                    <label for="nm">Name:</label>
+                </td>
+                <td>
+
+                
+                <input type="text" name="name" id ="nm" placeholder="enter name"/>
+                </td>
+                <tr>
+                    <td>
+                        <label for="per">Percentage</label>
+                    </td>
+                    <td>
+                        <input type="number" name="perc" id ="perc" min ="30" max="100"/>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="addr">Adderess</label>
+                    </td>
+                    <td>
+                        <textarea name="addr" id="addr">Address</textarea>
+                    </td>
+                    <td>
+                        <label for="addr">Address</label>
+                    </td>
+                    <td>
+                        <textarea name="addr" id="addr" rows="5" cols="20" text="xyz">visible area text</textarea>
+                        
+                    </td>
+                </tr>
+
+
+            </tr>
+        </form>
+    </table>
     
 </body>
 </html>

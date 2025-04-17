@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getLocation(){
+           if(navigator.geolocation){
+            //to get current location
+           navigator.geolocation.getCurrentPosition(showposition,showerror);
+            //to get live location location
+            //navigator.geolocation.watchPosition(showposition,showerror);
+            //navigator.geolocation.clearWatch
+            
+            
+
+           }else{
+            document.getElementById("mydiv").innerHTML="geolocation API not supported"
+           }
+        }
+        function showposition(position){
+            document.getElementById("mydiv").innerHTML="Latitude: "+position.coords.latitude+" Longitude : "+position.coords.longitude
+        }
+        function showerror(err){
+            console.log(err)
+        }
+
+
+    </script>
+</head>
+<body>
+    <button type="button" name="btn" id="btn" onclick="getLocation()">Get Location</button>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

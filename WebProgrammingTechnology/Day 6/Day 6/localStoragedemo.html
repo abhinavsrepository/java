@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function incrementcounter(){
+            //to check whether browser supports storage API
+             if(typeof(Storage)!==undefined){
+                //if count exists then increment it
+                alert(localStorage.count);
+                if (localStorage.count!==undefined){
+                    localStorage.count=parseInt(localStorage.count)+1
+                }else{
+                    localStorage.count=1
+                }
+             }
+             document.getElementById("mydiv").innerHTML="you clicked "+localStorage.count+" times";
+        }
+    </script>
+</head>
+<body>
+    <button type="button" name="btn" id="btn" onclick="incrementcounter()">Click me</button>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>
