@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            border:2px solid red;
+            border-radius: 20px;
+            width:200px
+        }
+    </style>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //display mydiv1 and hide mydiv2
+            $('#show').click(function(){
+                $('#mydiv1').show(800,function(){
+                    console.log("show done");
+                });
+                $('#mydiv2').hide(800,function(){
+                    console.log("hide done")
+                })
+            })
+             //display mydiv2 and hide mydiv1
+            $('#hide').click(function(){
+                $('#mydiv1').hide(800,function(){
+                    console.log("hide done");
+                });
+                $('#mydiv2').show(800,function(){
+                    console.log("show done")
+                })
+            })
+              //toggle mydiv2 and mydiv1
+            $('#toggle').click(function(){
+                $('#mydiv1').toggle(800,function(){
+                    console.log("toggle done");
+                });
+                $('#mydiv2').toggle(800,function(){
+                    console.log("toggle done")
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="show" id="show">show</button>
+    <button type="button" name="hide" id="hide">Hide</button>
+    <button type="button" name="toggle" id="toggle">toggle</button>
+    <div id="mydiv1">
+        <img src="../images/flowers.png" width="200px" height="200px"></img>
+    </div>
+    <div id="mydiv2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam nulla rerum commodi ullam exercitationem? Accusamus commodi ratione numquam asperiores est corporis! Obcaecati incidunt officiis porro vero, temporibus necessitatibus qui.''
+    </div>
+</body>
+</html>

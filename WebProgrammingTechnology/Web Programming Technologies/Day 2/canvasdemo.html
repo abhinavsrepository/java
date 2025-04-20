@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:2px solid red
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" height="500px" width="400px"></canvas>
+    <script>
+        mcanvas=document.getElementById("mycanvas");
+        ctx=mcanvas.getContext('2d')
+        ctx.moveTo(0,0);
+        ctx.lineTo(300,100);
+        ctx.stroke();
+        //to display text
+        ctx.font = "30px Arial"
+        ctx.fillText("Hello world", 10, 50);
+        ctx.fillText("Welcome to html coding", 10, 200);
+    </script>
+</body>
+</html>

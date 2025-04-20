@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[10,20,30,34,5];
+        //overwrite value at 1 st position
+        arr[1]=100;
+        //add value at the end
+        arr.push(23);
+        //add value at the beginning of the array
+        arr.unshift(50);
+        //delete from the beginning
+        arr.shift(); //delete 50
+        //delete from the end
+        arr.pop()   //delete 23
+        //add at the position
+        document.write("Before adding:" +arr+"<br/>")
+        arr.splice(1,0,40,50)
+        document.write("after adding:" +arr+"<br/>")
+        //delete from particular position
+        //arr.splice(position,number of elements to delete)
+        document.write(arr+"<br/>")
+        arr.splice(1,1)
+        document.write(arr+"<br/>")
+        //replace at the particular position
+        arr.splice(1,2,38,56,78,90)
+        document.write("after replacing:" +arr+"<br/>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       strarr=["Python","perl","linux","OS","Javascript"]
+      // document.getElemensByTagName("body")[0].addEventListener("load",generateUList)
+       function generateUList(){
+             var str="<ul>"
+            for(let v of strarr){
+                str+=`<li>${v}</li>`
+            }
+            str+="</ul>"
+            alert(str)
+            console.log(str);
+            document.getElementById("mydiv").innerHTML=str;
+       }
+       function managecourse(ev){
+        console.log(event.target.name,event.target.value)
+        var op=ev.target.name;
+        cnm=document.getElementById("cname").value;
+        switch(op){
+            case "add":
+                 strarr.push(cnm);
+                 break;
+            case "del":
+                var pos=strarr.findIndex(nm=>nm===cnm)
+                if(pos!==-1){
+                    strarr.splice(pos,1)
+                    alert("deleted successfuly");
+                }else{
+                    alert("not found");
+                }
+                break
+            case "update":
+                var pos=strarr.findIndex(nm=>nm===cnm)
+                if(pos!==-1){
+                    newcnm=prompt("pls enetr new course name")
+                    strarr.splice(pos,1,newcnm);
+                    alert("updated successfully")
+
+                }else{
+                    alert("not found")
+                }
+                break;
+        }
+        generateUList();
+        document.getElementById("cname").value=""
+        document.getElementById("cname").focus();
+       }
+    </script>
+</head>
+<body onload="generateUList()"">
+    Course Name : <input type="text" name="nm" id="cname">
+    <button type="button" name="add" id="add" value="add" onclick="managecourse(event)">Add new course</button>
+    <button type="button" name="del" id="del" value="del" onclick="managecourse(event)">Delete course</button>
+
+    <button type="button" name="update" id="update" value="update" onclick="managecourse(event)">Delete course</button>
+    <div id="mydiv">
+       
+    </div>
+</body>
+</html>

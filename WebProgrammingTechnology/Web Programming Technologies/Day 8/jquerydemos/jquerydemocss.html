@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        $(document).ready(()=>{
+             $('p:even').css("background-color","cyan")
+             $('p:odd').css("background-color","yellow")
+             //each function similar to for loop
+               $('#btn').click(function(){
+                    /*$('p').each(function(index,element){
+                        alert(`${index}-----${$(element).html()}`)
+                    })*/
+                    $('p').each(function(index){
+                        alert(`${index}-----${$(this).html()}`)
+                    })
+
+               })
+
+             /* var arr=document.getElementsByTagName("p");
+              for(var i=0;i<arr.length;i++){
+                alert(arr[i].innerHTML);
+              }*/
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="btn" id="btn">click me</button>
+    <p name="myp">This is para1111</p>
+    <p >This is para222222</p>
+    <p>This is para333333</p>
+    <h1>this is h111111</h1>
+    <div>
+        <p>This is para1111 inside div</p>
+        <p name="mytest">This is para222222 inside div</p>
+        <p>This is para333333 inside div</p>
+        <h1>this is h122222</h1>
+        <article>
+            <p name="check">This is para1111 inside div inside article</p>
+            <p>This is para222222 inside div inside article</p>
+            <p>This is para333333 inside div inside article</p>
+        </article>
+    </div>
+    <p>this is p after div</p>
+</body>
+</html>

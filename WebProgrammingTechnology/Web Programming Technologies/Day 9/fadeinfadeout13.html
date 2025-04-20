@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            border:2px solid red;
+            border-radius: 20px;
+            width:200px
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            //display mydiv1 and hide mydiv2
+            $('#fadein').click(function(){
+                $('#mydiv1').fadeIn(800,function(){
+                    console.log("slideup done");
+                });
+                $('#mydiv2').fadeOut(800,function(){
+                    console.log("slidedown done")
+                })
+            })
+             //display mydiv2 and hide mydiv1
+            $('#fadeout').click(function(){
+                $('#mydiv1').fadeOut(2000,function(){
+                    console.log("hide done");
+                });
+                $('#mydiv2').fadeIn(2000,function(){
+                    console.log("show done")
+                })
+            })
+              //toggle mydiv2 and mydiv1
+            $('#fadetoggle').click(function(){
+                $('#mydiv1').fadeToggle(800,function(){
+                    console.log("toggle done");
+                });
+                $('#mydiv2').fadeToggle(800,function(){
+                    console.log("toggle done")
+                })
+            })
+
+              //toggle mydiv2 and mydiv1
+              $('#fadeto').click(function(){
+                $('#mydiv1').fadeTo(800,0.3,function(){
+                    console.log("toggle done");
+                });
+                $('#mydiv2').fadeTo(800,0.3,function(){
+                    console.log("toggle done")
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="fadein" id="fadein">fadein</button>
+    <button type="button" name="fadeout" id="fadeout">fadeout</button>
+    <button type="button" name="fadetoggle" id="fadetoggle">fadetoggle</button>
+    <button type="button" name="fadeto" id="fadeto">fadeto</button>
+    <div id="mydiv1">
+        <img src="./Day 1/images/flowers.png" width="200px" height="200px"></img>
+    </div>
+    <div id="mydiv2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam nulla rerum commodi ullam exercitationem? Accusamus commodi ratione numquam asperiores est corporis! Obcaecati incidunt officiis porro vero, temporibus necessitatibus qui.''
+    </div>
+</body>
+</html>

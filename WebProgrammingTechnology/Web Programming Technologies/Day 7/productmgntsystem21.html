@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- add external javascript in html page -->
+    <script src="./js/productmgnt.js">      
+    </script>
+    <style>
+        input[type=text]:focus{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body onload=" displaytable()">
+    <form>
+        Id: <input type="text" name="pid" id="pid" placeholder="enetr id" required><span style="color:red">*</span><br>
+
+        Name: <input type="text" name="Name" id="pname" placeholder="enetr Name" required><span style="color:red">*</span><br>
+
+        qty: <input type="text" name="qty" id="qty" placeholder="enetr quantity" required><span style="color:red">*</span><br>
+
+        price: <input type="text" name="price" id="price" placeholder="enetr price" required><span style="color:red">*</span><br>
+
+        <button type="button" name="btn" id="add" onclick="addNewProduct()">Add new product</button>
+
+        <button type="button" name="btn" id="del" onclick="deleteProduct()">Delete product</button>
+
+        <button type="button" name="btn" id="del" onclick="updateProduct()">update product</button>
+
+    </form>
+    <br/><br/><br/>
+
+    Search : <input type="text" name="search" id="search" onkeyup="searchdata(event)">
+    <button type="button" name="btn" id="sbtn" onclick="searchdata(event)">Search</button><br/><br/>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

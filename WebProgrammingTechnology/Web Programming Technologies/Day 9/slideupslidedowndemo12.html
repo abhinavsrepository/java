@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            border:2px solid red;
+            border-radius: 20px;
+            width:200px
+        }
+    </style>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //display mydiv1 and hide mydiv2
+            $('#slideup').click(function(){
+                $('#mydiv1').slideUp(800,function(){
+                    console.log("slideup done");
+                });
+                $('#mydiv2').slideDown(800,function(){
+                    console.log("slidedown done")
+                })
+            })
+             //display mydiv2 and hide mydiv1
+            $('#slidedown').click(function(){
+                $('#mydiv1').slideDown(800,function(){
+                    console.log("hide done");
+                });
+                $('#mydiv2').slideUp(800,function(){
+                    console.log("show done")
+                })
+            })
+              //toggle mydiv2 and mydiv1
+            $('#slidetoggle').click(function(){
+                $('#mydiv1').slideToggle(800,function(){
+                    console.log("toggle done");
+                });
+                $('#mydiv2').slideToggle(800,function(){
+                    console.log("toggle done")
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="slideup" id="slideup">slideup</button>
+    <button type="button" name="slidedown" id="slidedown">slidedown</button>
+    <button type="button" name="slidetoggle" id="slidetoggle">slidetoggle</button>
+    <div id="mydiv1">
+        <img src="../images/flowers.png" width="200px" height="200px"></img>
+    </div>
+    <div id="mydiv2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam nulla rerum commodi ullam exercitationem? Accusamus commodi ratione numquam asperiores est corporis! Obcaecati incidunt officiis porro vero, temporibus necessitatibus qui.''
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doaction(){
+          var op=document.getElementById("op");
+          var pos=op.selectedIndex;
+          var val=op.options[pos].value;
+          var s=document.getElementById("str").value;
+          switch(val){
+            case "upper":
+                result=s.toUpperCase();
+                break;
+            case "lower":
+                result=s.toLowerCase();
+                break;
+            case "search":
+                pattern=/a.*?n/
+                position=s.search(pattern)
+                result="position: "+position;
+                break;
+            case "match":
+                pattern=/a.*?n/gi
+                position=s.match(pattern)
+                result="position: "+position;
+                break;
+            case "replace":
+                pattern=/a.*?n/gi
+                result=s.replace(pattern,"xxxxxxxx")
+               
+                break;
+            case "indexOf":
+                searchstr=prompt("enetr string to search")
+                result=s.indexOf(searchstr);
+                break;
+            case "slice":
+                result=s.slice(1,9)
+                break;
+            case "split":
+                result=s.split(" ")
+                console.log(result)
+                break;   
+            default:
+                result="";
+                console.log("wrong choice");
+
+          }
+           document.getElementById("result").value=result;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        String: <input type="text" name="str" id="str" size="50"><br>
+        Result: <input type="text" name="result" id="result" size="50"><br>
+        <select id="op">
+            <option value="upper">upper</option>
+            <option value="lower">lower</option>
+            <option value="search">search</option>
+            <option value="match">match</option>
+            <option value="replace">replace</option>
+            <option value="indexOf">indexOf</option>
+            <option value="slice">slice</option>
+            <option value="split">split</option>
+        </select><br>
+        <button type="button" name="action" id="action" onclick="doaction()">Perform action</button>
+    </form>
+</body>
+</html>

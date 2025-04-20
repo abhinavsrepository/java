@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+       var ob={id:123,name:"dhfjksh",dept:{deptno:12,dname:"HR"},hobbies:["reading","trekking"]}
+       //alert(ob);
+       //alert(`id : ${ob.id} name: ${ob.name} deptname: ${ob.dept["dname"]}`)
+       //convert javascript into JSON format
+       jsonob=JSON.stringify(ob);
+       alert(jsonob)
+       //convert JSON into javascript object
+       var ob1=JSON.parse(jsonob)
+       alert(ob1)
+       ob1.mobile=44444;
+       ob1.email="easd@gmail.com"
+       for(let p in ob1){
+         console.log(`${p}--->${ob1[p]}`)
+       }
+
+    </script>
+</body>
+</html>

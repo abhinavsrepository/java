@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    <script>
+        $(document).ready(function(){
+            //the event will happen only once
+            $('#one').one('click',function(){
+                alert("hello everyone only once!!")
+            })
+            //add new textbox below the form
+            var choicecnt=1
+            $('#add').on('click',function(){
+                var v=$('#choice').clone();
+                $(v).val("");
+                $(v).attr("id","choice"+choicecnt);
+                choicecnt++;
+                $('form').append(v);
+                $('form').append("<br/>");
+            })
+            //this function will display data below the form
+            //also remove click event for add new choice
+            $('#submit').click(function(){
+                alert("in submit data")
+                var name=$('#name').val();
+                var addr=$('#addr').val();
+                var str="";
+                $('input[name^="choice"]').each(function(index,element){
+                    str+=$(element).val()+",";
+
+                })
+                var data="Name : "+name+"<br/>Address: "+addr+"<br/>"
+                data+="Choices : "+str.slice(0,str.length-1)
+                $('#mydiv').html(data);
+                $('#add').off('click');
+            })
+            $('form').delegate('input[type]','focus',function(){
+                $(this).css("background-color","yellow");
+
+            })
+            $('form').delegate('input[type]','blur',function(){
+                $(this).css("background-color","white");
+                
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <form>
+    <button type="button" name="one" id="one">One popup</button><br/>
+    <button type="button" name="add" id="add">Add new choice</button>
+    <button type="button" name="submit" id="submit">submitdata</button><br/>
+    Name: <input type="text" name="nm" id="name"><br/>
+    Address: <input type="text" name="addr" id="addr"><br/>
+    choice: <input type="text" name="choice" id="choice"><br/>
+</form>
+<div id="mydiv">
+
+</div>
+</body>
+</html>

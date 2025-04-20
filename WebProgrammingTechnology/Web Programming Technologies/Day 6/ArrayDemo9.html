@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=new Array(2,3,4,"xxxx")
+        document.write("Arr :"+arr+"<br/>")
+        arr1=[23,12,4,5,"aaaa",34,23]
+        document.write(arr1+"---->"+arr1.length);
+        //display array
+        for(var i=0;i<arr1.length;i++){
+            console.log(`${i}--->${arr1[i]}`)
+        }
+        //display array using foreach loop
+        for(let val of arr1){
+            console.log(val) 
+        }
+        document.write("<br>")
+        arr1.forEach(num => {
+          document.write(num+" ");  
+        });
+        arr1[0]=200; //overwrite the value at 0th position
+        //add contents of arr2 into arr1
+        arr1=[10,20,30]
+        arr2=["a","bbbb",34,"ccc"]
+        //arr1=[10,20,30,arr2] // length 4
+        //document.write("<br/>"+arr1+"----->"+arr1.length)
+        arr2[0]="xxx";
+        document.write("<br/> After changes"+arr1+"----->"+arr1.length)
+        //for(var v of arr2){
+        //    arr1.push(v);
+        //}
+        arr1=[10,20,30,...arr2]  //spread operator
+        document.write("<br/>"+arr1+"----->"+arr1.length)
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            background-color: cyan;
+            border:2px solid red;
+            border-radius:20px;
+            width:200px
+        }
+        .myc{
+            background-color: yellow;
+            border:2px solid blue;
+            border-radius:20px
+        }
+        .hidden{
+            display:none
+        }
+        .show{
+            display:block;
+        }
+    </style>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        //When we hover on div, the its style should change
+        $(document).ready(function(){
+            $('#mydiv').hover(function(){
+                console.log("in mouse over");
+                //function chaining
+                $('#mydiv')
+                .toggleClass("myc")
+                .toggleClass("myclass")
+
+            });
+            /*$('#mydiv').hover(function(){
+                console.log("in mouse over");
+                $('#mydiv').addClass("myc")
+                $('#mydiv').removeClass("myclass")
+
+            },function(){
+                console.log("in mouse out");
+                $('#mydiv').addClass("myclass")
+                $('#mydiv').removeClass("myc")
+            })*/
+             
+            //toggle imagedisplay after you click on the button
+            $('#btn').click(function(){
+                $('#img1').toggleClass("hidden")
+                .toggleClass("show");
+                $('#img2').toggleClass("hidden")
+                .toggleClass("show")
+            })
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="mydiv" class="myclass">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officia ea, veniam vel sequi voluptatem obcaecati quibusdam accusamus voluptatum maiores, perferendis sunt. Obcaecati ut quam, iure maiores corporis quisquam aperiam.
+    </div>
+    <button type="button" name="btn" id="btn">show hide image</button>
+    <div id="img1" class="myclass show">
+        <img src="../images/flowers.png" width="200px" height="200px"></img>
+
+    </div>
+    <div id="img2" class="myclass hidden">
+        <img src="../images/small boy.jpg" width="200px" height="200px"></img>
+        
+    </div>
+</body>
+</html>

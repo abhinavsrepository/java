@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ob={"id":111,"name":"Kishori",display:function(){
+            console.log("in function")
+        }}
+        var a=45;
+        var nm="Rajan"
+        ob1={id:a,name:nm};
+        var id=500
+        var name="Revati";
+        //var ob2={id:id,name:name}
+        var ob2={id,name}
+
+        //constructor function
+        var Person=function(id,nm,mob){
+            this.pid=id;
+            this.pname=nm;
+            this.mob=mob;
+            this.display=function(){
+                return `Id: ${this.pid} Name: ${this.pname} Mobile: ${this.mob}`
+            }
+        }
+        var Employee=function(dept,desg){
+            this.dept=dept;
+            this.desg=desg;
+            
+        }
+        var p1=new Person(11,"Ashu","44444");
+        var p2=new Person(23,"ddddd","66666")
+        var e1=new Employee("HR","mgr");
+        p1.addr="baner";
+        //e1 is child and p1 is parent
+        e1.__proto__=p1;
+        for(let p in e1){
+            if(e1.hasOwnProperty(p))
+                console.log(`Own Property: ${p}---->${e1[p]}`)
+            else
+                console.log(`Parent property:${p}---->${e1[p]} `) 
+        }
+
+
+    </script>
+</body>
+</html>

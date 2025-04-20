@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     class Person{
+        constructor(pid,pname,mob){
+            this.pid=pid;
+            this.pname=pname;
+            this.mob=mob;
+        }
+        display(){
+            return `Id: ${this.pid} Name: ${this.name} mobile: ${this.mobile}`
+        }
+     }
+     class Employee extends Person{
+        constructor(pid,nm,m,dept,desg){
+            super(pid,nm,m)
+            this.dept=dept;
+            this.desg=desg;
+        }
+        display(){
+            return super.display()+` department: ${this.dept} desg: ${this.desg}` 
+        }
+     }
+     var e1=new Employee(11,"Ajit","4444","Admin","VP");
+     for(let p in e1){
+        console.log(`${p}----->${e1[p]}`)
+
+     }
+     console.log(Object.keys(e1));
+     var ob={}
+     ob.name="kfjgldkj"
+     console.log(Object.keys(ob).length>0);
+   </script> 
+</body>
+</html>

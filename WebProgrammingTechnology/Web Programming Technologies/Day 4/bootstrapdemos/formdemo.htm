@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script src="./bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.css"></link>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+          <label for="pid">Product id</label>
+          <input type="text" class="form-control" id="pid" name="pid" >
+          
+        </div>
+        <div class="form-group">
+            <label for="pnm">Product Name</label>
+            <input type="text" class="form-control" id="pnm" name="pname" >
+            
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+     <hr size="6px" color="red"/>
+    
+        <form method="post" action="registerdata">
+            <div class="form-group"> 
+              <label for="nm">Name:</label>      
+              
+                <input type="text" name="name" id="nm" placeholder="enter name"/>
+             </div>
+                 
+               
+             <div class="form-group"></div>
+              <label for="per">Percentage:</label>      
+              
+                <input type="number" name="perce" id="per" min="20" max="100"/>
+            </div>
+                 
+               
+           
+              <label for="addr">Address</label>     
+              
+                <textarea name="addr" id="addr" rows="5" cols="20"></textarea>
+                 
+               
+           
+              <label for="addr">Address</label>     
+              
+                https://<textarea name="addr" id="addr" rows="5" cols="20" text="xyz road">visible text</textarea>
+                 
+               
+           
+              <label for="unm">username</label>     
+              <input type="text" name="uname" id="unm" placeholder="enter username">     
+               
+           
+              <label for="pass">Password</label>     
+              
+                <input  type="password"name="passwd" id="pass" placeholder="enter password" />
+                 
+               
+           
+              <label for="cpass">Confirm Password</label>     
+              
+                <input type="password" name="cpasswd" id="cpass" placeholder="Retype password"/>
+                 
+               
+           
+              <label>gender:</label>     
+              <input type="radio" name="gender" id="female" value="female" checked/><label for="female">Female</label>
+            <input type="radio" name="gender" id="male" value="male"/><label for="male">male</label>     
+               
+           
+              <label>Degree</label>     
+                         
+                <input type="radio" name="degree" id="BE" value="BE"/><label for="BE">BE</label>
+
+                <input type="radio" name="degree" id="BTech" value="BTech"/><label for="BTech">BTech</label>
+
+                <input type="radio" name="degree" id="MTech" value="MTech"/><label for="MTech">MTech</label>
+
+                <input type="radio" name="degree" id="PHD" value="PHD"/><label for="PHD">PHD</label>
+                 
+               
+           
+              Hobbies :     
+              
+                <input type="checkbox" name="hobbies" id="Cycling" value="Cycling" checked><label for="Cycling" >Cycling</label>
+
+                <input type="checkbox" name="hobbies" id="Biking" value="Biking"><label for="Biking">Biking</label>
+
+                <input type="checkbox" name="hobbies" id="Trekking" value="Trekking"><label for="Trekking">Trekking</label><br>
+
+                <input type="checkbox" name="hobbies" id="Reading" value="Reading"><label for="Reading">Reading</label>
+
+                <input type="checkbox" name="hobbies" id="Singging" value="Singging"><label for="Singging">Singging</label>
+
+                <input type="checkbox" name="hobbies" id="dancing" value="dancing"><label for="dancing">dancing</label>
+                
+            
+                 
+               
+           
+              <lable>City</lable>     
+              
+                <select name="city" id="ct">
+                   <option value="test">-----select one---</option>
+                   <option value="Pune">Pune</option>
+                   <option value="Mumbai">Mumbai</option>
+                   <option value="Delhi">Delhi</option>
+                   <option value="Chennai">Chennai</option>
+                </select>
+                 
+               
+           
+              <label >Profile</label>     
+              <input type="file" name="file" id="file">     
+               
+           
+                   
+              
+                <button type="submit" name="btn" id="submit" value="submit">Register me</button>
+
+                <button type="reset" name="btn" id="reset" value="reset">Cancel</button>
+                 
+               
+        </form>
+    </table>
+</body>
+</html>

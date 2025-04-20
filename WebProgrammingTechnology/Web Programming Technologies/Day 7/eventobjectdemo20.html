@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validatedata(ev){
+            console.log(ev)
+            ev.preventDefault(); //to stops default reload action on page
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="myfrm" onsubmit="return validatedata(event)">
+        Id: <input type="text" name="id" id="id" placeholder="enetr id" required><span style="color:red">*</span><br>
+
+        Name: <input type="text" name="Name" id="Name" placeholder="enetr Name" required><span style="color:red">*</span><br>
+
+        mobile: <input type="text" name="mobile" id="mobile" placeholder="enetr mobile" required pattern="[0-9]{10}"><span style="color:red">*</span><br>
+
+        <button type="submit" name="btn" id="add">Add new Employee</button>
+
+    </form>
+</body>
+</html>

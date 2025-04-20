@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        //every change in the dropdoen box will call this function to send new request, and get one object
+        function sendrequest(uid){
+            console.log(uid);
+            $.ajax({
+                url:"https://jsonplaceholder.typicode.com/posts/"+uid,
+                type:"GET",
+                success:function(result,status,xhr){
+                    str="Id: "+result.id+"<br/>"
+                    str+="userId: "+result.userId+"<br/>"
+                    str+="title: "+result.title+"<br/>";
+                    str+="body: "+result.body;
+                    $('#mydiv2').html(str);
+                },
+                error:function(){}
+            })
+        }
+        function displayDropDown(arr){
+            var str="<select name='id' id='id'>"
+                for(let v of arr){
+                    str+=`<option value="${v.id}">${v.id}</option>`
+                }
+                str+='</select>';
+                $('#mydiv1').html(str);
+                //assign change event dynamically, after adding dropdown int he page
+                $('#id').change(function(){
+                    var data=$('#id option:selected').val();
+                    //sends new request based on selecetd data in the dropdown
+                    sendrequest(data)
+                })
+
+        }
+        $(document).ready(function(){
+            //sends ajax request and convert data into dropdown list
+            $('#getdata').click(function(){
+                $.ajax({
+                    url:"https://jsonplaceholder.typicode.com/posts",
+                    type:"GET",
+                    success:function(result,status,XHR){
+                        console.log(status)
+                        console.log(result);
+                        if(status==="success"){
+                            displayDropDown(result);
+                        }
+
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur facilis accusantium, autem ducimus culpa quibusdam corporis, reiciendis, est veritatis dolorum qui possimus amet quo rem deleniti? Dolorum aspernatur sed ipsa!
+    </div>
+    <button type="button" name="getdata" id="getdata">Get data</button>
+    <div id="mydiv1">
+        
+
+    </div>
+    <div id="mydiv2">
+
+    </div>
+</body>
+</html>

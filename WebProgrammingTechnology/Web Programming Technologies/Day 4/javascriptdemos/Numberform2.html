@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcaddition(){
+           var num1=parseInt(document.getElementById("num1").value)
+           var num2=parseInt(document.getElementById("num2").value)
+           var ans=num1+num2;
+           document.getElementById("result").value=ans;
+           document.getElementById("mydiv").innerHTML="Addition : "+ans
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        <label for="num1">Number1 : </label>
+        <input type="number" name="num1" id="num1"  autofocus ><br/>
+        <label for="num2">Number2 : </label>
+        <input type="number" name="num2" id="num2" ><br/>
+        <label for="num2">Result : </label>
+        <input type="text" name="result" id="result" readonly><br/>
+        <button type="button" name="add" id="add" onclick="calcaddition()">Addtion</button>
+    </form>
+    <div id="mydiv">
+       
+    </div>
+
+</body>
+</html>

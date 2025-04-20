@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+
+    </div>
+    <script>
+        function f1(){
+            console.log("in f1")
+        }
+        function f2(){
+            console.log("in f2")
+        }
+        function f3(){
+            console.log("f3 called")
+            document.getElementById("mydiv").innerHTML=new Date();
+        }
+        
+        console.log("before settimeout f1")
+        //call the function after timer is over
+        //it calls the function only once
+        setTimeout(f1,1000);
+        setTimeout(f2,500);
+        var c=setInterval(f3,500)
+
+        setTimeout(()=>{
+            console.log("clearing setinterval")
+            clearInterval(c)},2010);
+        console.log("after settimeout f1")
+    </script>
+</body>
+</html>

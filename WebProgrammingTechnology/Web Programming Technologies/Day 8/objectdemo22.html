@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ob={id:12,name:"xxx"}
+        //both references will be pointing to same memory location
+        var ob1=ob;
+        var ob2={id:ob1.id,name:ob1.name}
+        var ob3={}
+        ob3.id=ob1.id
+        ob3.name=ob1.name;
+        //spread operator---> to create a copy of the object
+        var ob4={...ob1}
+        console.log(ob4)
+        //destructuring of object
+        var n1=ob1.id;
+        var n2=ob1.name;
+        var {id:num1,name:num2}=ob1;
+        console.log(num1,num2)
+        var test={x:10,y:30,z:56}
+        var {x,y,z,p=45}=test;
+        console.log(x,y,z,p)
+        emp={empno:12,ename:"Revati",dept:{dname:"admin",dno:20}}
+        var {dept:{dno,dname}}=emp;
+        console.log("Dname --->"+dname+" dno -->"+dno)
+
+        //destructuring of array
+        var arr=[10,20,30,40,50]
+        var q=arr[0];
+        var q1=arr[1];
+        //separate out all values of array into corresponding variable
+        var [a,a1,a2,a3,a4]=arr;
+        console.log(a,a1,a2,a3,a4)
+        //0th index a, 1 index in b, and all remaining in arr1
+        var [a,b,...arr1]=arr
+        console.log(a,b)
+        console.log(arr1)
+        //store 1 st index value in s and 3 rd index value in t
+        var [,s,,t,...arr2]=arr;
+        console.log(s,t,arr2);
+
+
+
+    </script>
+</body>
+</html>

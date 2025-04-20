@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            background-color: yellow;
+            border:2px solid cyan;
+        }
+    </style>
+    <script src="./scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //to wrap every h1 tag in different div
+            //add parent element
+            $('#wraph1').click(function(){
+               $('h1').wrap("<div class='myclass'></div>")
+            })
+            //to wrap all h2 tags in single div
+            //add parent element
+            $('#wrapallh2').click(function(){
+                $('h2').wrapAll('<div class="myclass"></div>')
+            })
+           // add p tag below last child of mydiv
+            $("#append").click(function(){
+                $('#mydiv').append("<p class='p1'>This is append p</p>")
+            })
+            // add p tag before first child of mydiv
+            $("#prepend").click(function(){
+                $('#mydiv').prepend("<p class='p2'>This is append p</p>")
+            })
+            //remove all append para
+            $("#removeappend").click(function(){
+                $('p').remove(".p1")
+            })
+
+            //remove all prepend para
+            $("#removeprepend").click(function(){
+                $('p').remove(".p2")
+            })
+
+            //insert before element
+            $('#insertbefore').click(function(){
+                //alert("in insertBefore")
+                $("<h3>in h3 tag</h3>").insertBefore('#mydiv p:nth-child(3)')
+                
+                //$("<h3>in h3 tag</h3>").insertBefore('#mydiv p')
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="btn" id="append">Append para</button>
+    <button type="button" name="btn" id="prepend">prepend para</button>
+    <button type="button" name="btn" id="removeappend">remove Append para</button>
+    <button type="button" name="btn" id="removeprepend">remove prepend para</button>
+    <button type="button" name="btn" id="wraph1">wrap h1</button>
+    <button type="button" name="btn" id="wrapallh2" >warp all h2</button>
+    <button type="button" name="btn" id="insertbefore">insertBefore</button>
+    <div id="mydiv">
+        <p> this is p in the div</p>
+    </div>
+    
+    <!--<h2>this is h444444</h2>
+    <h2>this is h2333</h2>-->
+    <h1>this is h11111</h1>
+    <h1>this is h11111</h1>
+    <h2>this is h21111</h2>
+    <h2>this is h222222</h2>
+    
+</html>

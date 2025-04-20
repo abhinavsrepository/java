@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--<script src="./scripts/jquery.js"></script>-->
+    <script>
+        $(document).ready(function(){
+            //jquery code
+            $('#add').click(function(){
+                 var n1=parseInt($('#num1').val())
+                 var n2=parseInt($('#num2').val())
+                 var ans=n1+n2;
+                 //document.getElementById("result").value=ans
+                 $('#result').val(ans);
+                 $('#mydiv').html("addition : "+ans)
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <form>
+    Number1 : <input type="text" name="num1" id="num1"><br/>
+    Number2 : <input type="text" name="num2" id="num2"><br/>
+    Result : <input type="text" name="result" id="result"><br/>
+    <button type="button" name="add" id="add" >Addition</button>
+</form>
+<div id="mydiv">
+
+</div>
+</body>
+</html>
