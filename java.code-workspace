@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "java",
+			"path": "."
+		},
+		{
+			"name": "Web Programming Technologies",
+			"path": "../../Downloads/Web Programming Technologies"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web Programming Technologies"
+	}
+}
