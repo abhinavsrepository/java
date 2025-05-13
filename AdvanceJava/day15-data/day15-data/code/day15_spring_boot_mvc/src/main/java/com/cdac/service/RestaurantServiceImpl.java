@@ -1,0 +1,35 @@
+package com.cdac.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cdac.custom_exceptions.ResourceNotFoundException;
+import com.cdac.dao.RestaurantDao;
+import com.cdac.entities.Restaurant;
+
+@Service //=> spring bean containing B.L
+@Transactional //=> auto tx management
+public class RestaurantServiceImpl implements RestaurantService {
+
+	//depcy 
+	@Autowired
+	private RestaurantDao restaurantDao;
+	
+	@Override
+	public List<Restaurant> getAllRestaurants() {
+		// TODO Auto-generated method stub
+		return restaurantDao.findAll();
+	}
+
+	@Override
+	public Restaurant getRestaurantDetails(Long restaurantId) {
+		return restaurantDao.findById(restaurantId).orElseThrow(
+			()-> new ResourceNotFoundException("invalid Restaurant Id - not foind ")	);
+		
+		
+	}
+
+}
